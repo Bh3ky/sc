@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Bheki — Personal Space</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/components.css">
+    </head>
+
+    <body>
+    <!-- Header -->
+    <div id="site-header"></div>
+
+    <main class="container">
+        <!-- Hero -->
+        <section class="hero">
+        <h1>hi, my name is what what</h1>
+        <p>welcome to my space on the internet</p>
+
+        <div class="actions">
+            <a class="btn" href="#projects">projects</a>
+            <a class="btn" href="/blog.html">blog</a>
+            <a class="btn" href="/notes.html">notes</a>
+            <a class="btn" href="/certs.html">cert</a>
+            <button class="btn" onclick="openLink('resume')">resume</button>
+            <button class="btn" onclick="openLink('love')">what i love</button>
+        </div>
+        </section>
+
+        <!-- Two tiles -->
+        <section class="grid-2">
+        <div class="card glow">
+            <h3>terminal</h3>
+            <div id="terminal"></div>
+        </div>
+
+        <div class="card glow">
+            <h3>github activity</h3>
+            <div id="github"></div>
+        </div>
+        </section>
+
+        <!-- Featured projects -->
+        <section id="projects" class="features">
+        <h2>featured work</h2>
+        <div class="feature-grid">
+            <div class="card">project one</div>
+            <div class="card">project two</div>
+            <div class="card">project three</div>
+            <div class="card">project four</div>
+        </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="site-footer"></div>
+
+    <!-- Scripts -->
+    <script src="/js/include.js"></script>
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/github.js"></script>
+    <script src="/js/terminal.js"></script>
+    <script src="/js/links.js"></script>
+</body>
+</html>
