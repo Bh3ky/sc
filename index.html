@@ -1,72 +1,115 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Bheki — Personal Space</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bheki Ndlovu - Dev">
+    <title>sc | personal website</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="#top" class="back-to-top" id="top">🫟</a>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="/css/theme.css">
-    <link rel="stylesheet" href="/css/grid.css">
-    <link rel="stylesheet" href="/css/components.css">
-    </head>
+    <h1>Hi, I'm Bheki 👋</h1>
 
-    <body>
-    <!-- Header -->
-    <div id="site-header"></div>
+    <p>Welcome to my space!! A minimal corner of the internet where I share my thoughts,
+        projects, and experiments. I am passionate about
+        <strong>web development, data science, AI & ML, and robotics</strong>, and I love
+        building software that solves problems and sparks curiosity. Dive in and explore
+        what I am tinkering with!!
+    </p>
 
-    <main class="container">
-        <!-- Hero -->
-        <section class="hero">
-        <h1>hi, my name is what what</h1>
-        <p>welcome to my space on the internet</p>
+    <div class="social-links">
+        <a href="https://github.com/bh3ky" target="_blank" rel="noopener">Github</a>
+        <a href="https://x.com/bhekydotdev" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://linkedin.com/in/bheki-ndlovu9" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:bheky.dev@gmail.com" target="_blank" rel="noopener">Email</a>
+    </div>
 
-        <div class="actions">
-            <a class="btn" href="#projects">projects</a>
-            <a class="btn" href="/blog.html">blog</a>
-            <a class="btn" href="/notes.html">notes</a>
-            <a class="btn" href="/certs.html">cert</a>
-            <button class="btn" onclick="openLink('resume')">resume</button>
-            <button class="btn" onclick="openLink('love')">what i love</button>
-        </div>
-        </section>
+    <h2>Projects</h2>
 
-        <!-- Two tiles -->
-        <section class="grid-2">
-        <div class="card glow">
-            <h3>terminal</h3>
-            <div id="terminal"></div>
-        </div>
+    <div class="project">
+        <blockquote>
+            <a href="#" target="_blank" rel="noopener">
+                <h3>mwenento</h3>
+                <p>Behavioral intelligence engine for e-commerce checkout drop-off prediction.</p>
+            </a>
+        </blockquote>
 
-        <div class="card glow">
-            <h3>github activity</h3>
-            <div id="github"></div>
-        </div>
-        </section>
+        <blockquote>
+            <a href="#" target="_blank" rel="noopener">
+                <h3>price-atlas</h3>
+                <p>AI-powered tool for comparing product prices across retailers, with real-time insights.</p>
+            </a>
+        </blockquote>
 
-        <!-- Featured projects -->
-        <section id="projects" class="features">
-        <h2>featured work</h2>
-        <div class="feature-grid">
-            <div class="card">project one</div>
-            <div class="card">project two</div>
-            <div class="card">project three</div>
-            <div class="card">project four</div>
-        </div>
-        </section>
-    </main>
+        <blockquote>
+            <a href="#" target="_blank" rel="noopener">
+                <h3>kituo</h3>
+                <p>An idea validation and market intelligence hub for startups targeting niche markets in developing countries.</p>
+            </a>
+        </blockquote>
+    </div>
 
-    <!-- Footer -->
-    <div id="site-footer"></div>
+    <h2>Blogs</h2>
 
-    <!-- Scripts -->
-    <script src="/js/include.js"></script>
-    <script src="/js/theme-toggle.js"></script>
-    <script src="/js/github.js"></script>
-    <script src="/js/terminal.js"></script>
-    <script src="/js/links.js"></script>
+    <div class="blog-writing">
+        <blockquote>
+            <a href="https://dotttt263.substack.com/p/random-thoughts" target="_blank" rel="noopener">
+                <h3>random thoughts💭</h3>
+                <span class="meta">2 min read</span>
+            </a>
+
+        </blockquote>
+
+    </div>
+
+    <h2>Wonder Hub</h2>
+
+    <div class="wonder-hub">
+        <a href="https://docs.google.com/document/d/19OaE5yCjQZsXS6PqWyHyUhTSgc0-3On7AQ52LkRG7y8/edit?usp=sharing" target="_blank" rel="noopener" class="resource-link">
+            <p class="tag">A collection of stuff I can’t stop thinking about.</p>
+        </a>
+    </div>
+
+    <h2>Tech Stack</h2>
+
+    <!-- Tech stack component -->
+    <div id="tech-stack"></div>
+    <script>
+        fetch("partials/tech-stack.html")
+            .then(res => res.text())
+            .then(html => {
+            document.getElementById("tech-stack").innerHTML = html;
+            });
+    </script>
+
+
+
+
+
+        
+</div>
+
+<!-- other content -->
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  // Load external footer.html
+    fetch('partials/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+            // Set current year dynamically
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+</script>
+
+
 </body>
 </html>

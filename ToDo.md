@@ -7,6 +7,8 @@
 
 ### 1. Main page
 
+[ ] page layout
+
 
 #### 2. Blogs
 
