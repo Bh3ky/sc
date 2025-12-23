@@ -1,4 +1,4 @@
-## sc | personal website 👽
+## sc | personal website 🫟
 
 - static portfolio website i'm currently building with simple html, css & js.
 - to be hosted on github pages

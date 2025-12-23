@@ -1,0 +1,152 @@
+/* About page specific styles */
+.about-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.about-card {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 50px 40px;
+    box-shadow: 0 0 30px rgba(100, 200, 255, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Glow effect on card */
+.about-card:hover {
+    box-shadow: 0 0 40px rgba(100, 200, 255, 0.15);
+}
+
+.about-card h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+.about-card h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 40px 0 20px 0;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    color: #000000;
+}
+
+.about-card h3:first-of-type {
+    margin-top: 30px;
+}
+
+.about-card p {
+    color: #222020;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.about-card ul {
+    color: #222020;
+    line-height: 1.8;
+    margin-left: 25px;
+}
+
+.about-card ul li {
+    margin-bottom: 10px;
+}
+
+/* Status indicators */
+.status-online {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #22c55e;
+}
+
+.status-dot-online {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 2s ease-in-out infinite;
+    box-shadow: 0 0 14px #22c55e;
+    will-change: transform, opacity;
+}
+
+.status-offline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ef4444;
+}
+
+.status-dot-offline {
+    width: 8px;
+    height: 8px;
+    background: #dc2626;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.85);
+        opacity: 0.6;
+    }
+}
+
+.about-card {
+    position: relative;
+}
+
+/* Back button */
+.back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 22px;
+    text-decoration: none;
+    color: #222020;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.back-link:hover {
+    transform: translateX(-3px);
+    opacity: 0.7;
+}
+
+
+@media (max-width: 768px) {
+    .about-card {
+        padding: 30px 25px;
+    }
+
+    .about-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+    }
+
+    .social-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.indent {
+    margin-left: 20px;
+}
+

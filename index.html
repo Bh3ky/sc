@@ -1,115 +1,168 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bheki Ndlovu - Dev">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bheki Ndlovu - Dev" />
     <title>sc | personal website</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
+
+    <!-- Header (outside container) -->
+    <div id="site-header"></div>
+
+    <!-- Centered content -->
     <div class="container">
-        <a href="#top" class="back-to-top" id="top">🫟</a>
 
+        <h1>Hi, I'm Bheki 👋</h1>
 
-    <h1>Hi, I'm Bheki 👋</h1>
-
-    <p>Welcome to my space!! A minimal corner of the internet where I share my thoughts,
+        <p>
+        Welcome to my space!! A minimal corner of the internet where I share my thoughts,
         projects, and experiments. I am passionate about
-        <strong>web development, data science, AI & ML, and robotics</strong>, and I love
+        <strong>web development, data science, AI &amp; ML, and robotics</strong>, and I love
         building software that solves problems and sparks curiosity. Dive in and explore
         what I am tinkering with!!
-    </p>
+        </p>
 
-    <div class="social-links">
+        <div class="social-links">
         <a href="https://github.com/bh3ky" target="_blank" rel="noopener">Github</a>
         <a href="https://x.com/bhekydotdev" target="_blank" rel="noopener">Twitter</a>
         <a href="https://linkedin.com/in/bheki-ndlovu9" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:bheky.dev@gmail.com" target="_blank" rel="noopener">Email</a>
-    </div>
+        </div>
 
-    <h2>Projects</h2>
+        <h2>Projects</h2>
 
-    <div class="project">
+        <div class="project">
         <blockquote>
             <a href="#" target="_blank" rel="noopener">
-                <h3>mwenento</h3>
-                <p>Behavioral intelligence engine for e-commerce checkout drop-off prediction.</p>
+            <h3>mwenento</h3>
+            <p>Behavioral intelligence engine for e-commerce checkout drop-off prediction.</p>
             </a>
         </blockquote>
 
         <blockquote>
             <a href="#" target="_blank" rel="noopener">
-                <h3>price-atlas</h3>
-                <p>AI-powered tool for comparing product prices across retailers, with real-time insights.</p>
+            <h3>price-atlas</h3>
+            <p>AI-powered tool for comparing product prices across retailers, with real-time insights.</p>
             </a>
         </blockquote>
 
         <blockquote>
             <a href="#" target="_blank" rel="noopener">
-                <h3>kituo</h3>
-                <p>An idea validation and market intelligence hub for startups targeting niche markets in developing countries.</p>
+            <h3>kituo</h3>
+            <p>
+                An idea validation and market intelligence hub for startups targeting niche markets
+                in developing countries.
+            </p>
             </a>
         </blockquote>
-    </div>
+        </div>
 
-    <h2>Blogs</h2>
+        <h2>Blogs</h2>
 
-    <div class="blog-writing">
+        <div class="blog-writing">
         <blockquote>
             <a href="https://dotttt263.substack.com/p/random-thoughts" target="_blank" rel="noopener">
-                <h3>random thoughts💭</h3>
-                <span class="meta">2 min read</span>
+            <h3>random thoughts💭</h3>
+            <span class="meta">2 min read</span>
             </a>
-
         </blockquote>
+        </div>
 
-    </div>
+        <h2>Wonder Hub</h2>
 
-    <h2>Wonder Hub</h2>
-
-    <div class="wonder-hub">
-        <a href="https://docs.google.com/document/d/19OaE5yCjQZsXS6PqWyHyUhTSgc0-3On7AQ52LkRG7y8/edit?usp=sharing" target="_blank" rel="noopener" class="resource-link">
+        <div class="wonder-hub">
+        <a
+            href="https://docs.google.com/document/d/19OaE5yCjQZsXS6PqWyHyUhTSgc0-3On7AQ52LkRG7y8/edit?usp=sharing"
+            target="_blank"
+            rel="noopener"
+            class="resource-link"
+        >
             <p class="tag">A collection of stuff I can’t stop thinking about.</p>
         </a>
-    </div>
+        </div>
 
-    <h2>Tech Stack</h2>
+        <h2>Tech Stack</h2>
 
-    <!-- Tech stack component -->
-    <div id="tech-stack"></div>
-    <script>
+        <!-- Tech stack component -->
+        <div id="tech-stack"></div>
+
+        <script>
         fetch("partials/tech-stack.html")
             .then(res => res.text())
             .then(html => {
             document.getElementById("tech-stack").innerHTML = html;
             });
+        </script>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Load header -->
+    <script>
+        fetch("partials/header.html")
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("site-header").innerHTML = html;
+
+            // Initialize theme toggle
+            // const toggle = document.getElementById("theme-toggle");
+            // const root = document.documentElement;
+
+            // Apply saved theme if it exists
+            // const storedTheme = localStorage.getItem("theme");
+            // if (storedTheme) root.setAttribute("data-theme", storedTheme);
+
+            // function updateIcon() {
+            // const theme = root.getAttribute("data-theme");
+            // toggle.innerHTML = theme === "dark"
+            //    ? '<i data-lucide="moon" class="theme-icon"></i>'
+            //    : '<i data-lucide="sun" class="theme-icon"></i>';
+            // lucide.createIcons();
+            // }
+
+            // updateIcon();
+
+            // toggle.addEventListener("click", () => {
+            // const current = root.getAttribute("data-theme");
+            // const next = current === "dark" ? "light" : "dark";
+            // root.setAttribute("data-theme", next);
+            // localStorage.setItem("theme", next);
+            // updateIcon();
+            // });
+
+            // Render any icons inside the header
+            lucide.createIcons();
+
+            // --- About button redirect ---
+            const aboutBtn = document.querySelector('.nav-button.about-button');
+            if (aboutBtn) {
+                aboutBtn.addEventListener('click', () => {
+                    window.location.href = 'partials/about.html';
+                });
+            }
+        });
     </script>
 
-
-
-
-
-        
-</div>
-
-<!-- other content -->
-
-
-<div id="footer-placeholder"></div>
-
-<script>
-  // Load external footer.html
-    fetch('partials/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-            // Set current year dynamically
-            document.getElementById('year').textContent = new Date().getFullYear();
+    <!-- Load footer -->
+    <script>
+        fetch("partials/footer.html")
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("footer-placeholder").innerHTML = html;
+            const year = document.getElementById("year");
+            if (year) {
+            year.textContent = new Date().getFullYear();
+            }
         });
-</script>
-
+    </script>
 
 </body>
 </html>
